@@ -26,11 +26,38 @@ module.exports = {
           to: { height: 0 },
         },
       },
-      animation: {
+      animation:
+      {
+        "shine": "shine 2s linear infinite",
+        "text-gradient": "text-gradient 4s linear infinite",
+      },
+      "keyframes": {
+        "shine": {
+          "from": {
+            "backgroundPosition": "0 0"
+          },
+          "to": {
+            "backgroundPosition": "-200% 0"
+          },
+        },
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+
+    "keyframes": {
+      "text-gradient": {
+      "from": {
+      "backgroundPosition": "200% center"
+      }
+      }
+      }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    `prettier-plugin-tailwind`,
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-animate"),
+    require('@tailwindcss/typography'),
+  ],
 };
+
