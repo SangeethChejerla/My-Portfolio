@@ -8,8 +8,9 @@ import dark from '/public/anime-images/Dark-knight.jpg';
 import inception from '/public/anime-images/inception.jpg';
 import shawshank from '/public/anime-images/the-shawshank-redemption.jpg';
 
-import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
 import vagabond from '/public/anime-images/vagabond.jpg';
+import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
+
 
 
 
