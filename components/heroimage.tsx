@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import sng1 from '@/public/sng1.jpg';
+import sng1 from '/public/sng1.jpg';
 
 // Assuming you have a separate CSS file for styling
 const Heroimage = () => {
