@@ -2,7 +2,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-import { animeConstants } from '@/constants/anime'; // Import animeConstants
 
 interface Anime {
   name: string;
