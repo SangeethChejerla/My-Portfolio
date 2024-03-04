@@ -12,6 +12,7 @@ import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
 import vagabond from '/public/anime-images/vagabond.jpg';
 
 
+
 export const animeConstants = [
     {
         name: "Hyouka",

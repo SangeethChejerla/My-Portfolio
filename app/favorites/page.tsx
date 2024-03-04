@@ -1,7 +1,8 @@
 "use client"
-import AnimeCard from '@/components/favorites/anime-card'; // Import the AnimeCard component
-import MangaCard from '@/components/favorites/manga-card';
-import MovieCard from '@/components/favorites/movie-card';
+import AnimeCard from '@/components/fav-card/anime-card'; // Import the AnimeCard component
+import MangaCard from '@/components/fav-card/manga-card';
+import MovieCard from '@/components/fav-card/movie-card';
+
 
 import {
   Card,

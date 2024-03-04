@@ -1,22 +1,23 @@
 "use client"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { StaticImageData } from 'next/image';
 
 
-interface Movie {
+interface Manga {
     id:number;
   name: string;
   rating: number;
   description: string;
-  imagePath: string;
+  imagePath:StaticImageData;
 }
 
 interface MovieCardProps {
-  movie: Movie;
+  manga: Manga;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
-  const { id,name, rating, description,imagePath } = movie;
+const MangaCard: React.FC<MovieCardProps> = ({ manga }) => {
+  const {id, name, rating, description,imagePath } = manga;
 
   // Map the rating SVGs
   const ratingStars = Array.from({ length: rating }).map((_, index) => (
@@ -56,7 +57,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           <div className="flex space-x-1">{ratingStars}</div>
          
           <p className="text-base text-zinc-500 dark:text-zinc-400">{description}</p>
-          <div className=" flex justify-center">
+          <div className="flex justify-center">
           <Button variant={"outline"}
           className="cursor-default inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors">
             Enjoy
@@ -69,4 +70,4 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
     </>
   );
 };
-export default MovieCard;
+export default MangaCard;

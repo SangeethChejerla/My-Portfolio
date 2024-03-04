@@ -1,22 +1,23 @@
 "use client"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { StaticImageData } from 'next/image';
 
 
-interface Anime {
+interface Movie {
+    id:number;
   name: string;
   rating: number;
-  episodes: number;
   description: string;
-  imagePath: string;
+  imagePath:StaticImageData;
 }
 
-interface AnimeCardProps {
-  anime: Anime;
+interface MovieCardProps {
+  movie: Movie;
 }
 
-const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
-  const { name, rating, episodes, description,imagePath } = anime;
+const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+  const { id,name, rating, description,imagePath } = movie;
 
   // Map the rating SVGs
   const ratingStars = Array.from({ length: rating }).map((_, index) => (
@@ -44,7 +45,7 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
       <div className="flex flex-col">
         <Image
           alt="Sneaker Image"
-          className="aspect-square object-cover object-center"
+          className="aspect-[1/1] object-cover object-center"
           height={500}
           src={imagePath}
           width={800}
@@ -54,16 +55,11 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tighter">{name}</h1>
           <div className="flex space-x-1">{ratingStars}</div>
-          <p className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-            Episodes : {episodes}
-          </p>
-          <p className="text-base text-zinc-500 dark:text-zinc-400">
-            {description}
-            </p>
-          <div className="flex justify-center">
-          <Button variant={"ghost"}
-          className="cursor-default inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors"
-          >
+         
+          <p className="text-base text-zinc-500 dark:text-zinc-400">{description}</p>
+          <div className=" flex justify-center">
+          <Button variant={"outline"}
+          className="cursor-default inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors">
             Enjoy
           </Button>
           </div>
@@ -74,4 +70,4 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
     </>
   );
 };
-export default AnimeCard
+export default MovieCard;
