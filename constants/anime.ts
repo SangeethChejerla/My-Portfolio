@@ -8,7 +8,7 @@ import dark from '/public/anime-images/Dark-knight.jpg';
 import inception from '/public/anime-images/inception.jpg';
 import shawshank from '/public/anime-images/the-shawshank-redemption.jpg';
 
-import vagabond from '/public/anime-images/vagabond.jpg';
+
 import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
 
 
@@ -102,7 +102,7 @@ export const MangaConstants = [
         name: "Vagabond",
         rating: 5, // Please provide the rating for Hyouka
         description: "Set in 17th-century Japan, two young warriors, Takezō and Matahachi, embark on separate paths of redemption and self-discovery amidst a backdrop of samurai battles, personal trials, and the pursuit of martial mastery. Their journeys intertwine with the lives of legendary figures like Musashi Miyamoto and Kojirō Sasaki, shaping their destinies in a tumultuous era of honor, conflict, and transcendence.",
-        imagePath:vagabond
+        imagePath:classroom
     
     },
 ]
