@@ -5,7 +5,6 @@ import { StaticImageData } from 'next/image';
 
 
 interface Manga {
-    id:number;
   name: string;
   rating: number;
   description: string;
@@ -17,7 +16,7 @@ interface MovieCardProps {
 }
 
 const MangaCard: React.FC<MovieCardProps> = ({ manga }) => {
-  const {id, name, rating, description,imagePath } = manga;
+  const {name, rating, description,imagePath } = manga;
 
   // Map the rating SVGs
   const ratingStars = Array.from({ length: rating }).map((_, index) => (
@@ -44,7 +43,7 @@ const MangaCard: React.FC<MovieCardProps> = ({ manga }) => {
 <section className="w-full py-12 ">
       <div className="flex flex-col">
         <Image
-          alt="Sneaker Image"
+          alt="Manga Image"
           className="aspect-[1/1] object-cover object-center"
           height={500}
           src={imagePath}

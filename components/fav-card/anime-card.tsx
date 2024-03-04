@@ -45,7 +45,7 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
 <section className="w-full py-12 ">
       <div className="flex flex-col">
         <Image
-          alt="Sneaker Image"
+          alt="Anime Image"
           className="aspect-square object-cover object-center"
           height={500}
           src={imagePath}

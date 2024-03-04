@@ -31,7 +31,7 @@ export const TextGenerateEffect = ({
         );
         setAnimateOnce(true);
       }
-    }, [inView, animateOnce, scope.current]);
+    }, [inView, animateOnce,animate]);
   
     const renderWords = () => {
       return (

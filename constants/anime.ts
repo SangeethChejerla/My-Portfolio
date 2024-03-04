@@ -1,15 +1,15 @@
-import hyouka from '/public/anime-images/hyouka.jpg';
-import attack from '/public/anime-images/attack.jpg';
-import death from '/public/anime-images/death.jpg';
-import honey from '/public/anime-images/honey.jpg';
-import five from '/public/anime-images/5sec.jpg';
+import hyouka from 'public/anime-images/hyouka.jpg';
+import attack from 'public/anime-images/attack.jpg';
+import death from 'public/anime-images/death.jpg';
+import honey from 'public/anime-images/honey.jpg';
+import five from 'public/anime-images/5sec.jpg';
 
-import dark from '/public/anime-images/Dark-knight.jpg';
-import inception from '/public/anime-images/inception.jpg';
-import shawshank from '/public/anime-images/the-shawshank-redemption.jpg';
+import dark from 'public/anime-images/Dark-knight.jpg';
+import inception from 'public/anime-images/inception.jpg';
+import shawshank from 'public/anime-images/the-shawshank-redemption.jpg';
 
-import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
-import vagabond from '/public/anime-images/vagabond.jpg';
+import classroom from 'public/anime-images/classroom-of-the-elite.jpg';
+import vagabond from 'public/anime-images/vagabond.jpg';
 
 
 
@@ -58,7 +58,7 @@ export const animeConstants = [
 
 export const MovieConstants = [
     {
-        id : 1,
+
         name: "Dark Knight",
         rating: 5, // Please provide the rating for Hyouka
         description: "Batman faces his ultimate challenge as he confronts the Joker's reign of chaos, testing his resolve and abilities to combat injustice in Gotham City.",
@@ -67,7 +67,7 @@ export const MovieConstants = [
     },
 
     {
-        id:2,
+
         name: "Inception",
         rating: 5, // Please provide the rating for Hyouka
         description: "A skilled thief enters the subconscious of targets to steal secrets but is tasked with planting an idea into the mind of a CEO, leading to a high-stakes journey through layered dreams where reality becomes increasingly blurred.",
@@ -76,7 +76,7 @@ export const MovieConstants = [
     },
 
     {
-        id:3,
+
         name: "The Shawshank Redemption",
         rating: 5, // Please provide the rating for Hyouka
         description: "A man wrongly convicted of murder befriends fellow inmates while serving a life sentence, using his intelligence and resourcefulness to seek redemption and escape from Shawshank State Prison. With perseverance and hope, he embarks on a daring plan to secure his freedom and reunite with his friend in a distant paradise.",
@@ -88,7 +88,7 @@ export const MovieConstants = [
 
 export const MangaConstants = [
     {
-        id:1,
+
         name: "Classroom of Elite (Light novel)",
         rating: 5, // Please provide the rating for Hyouka
         description: "In a prestigious high school divided by class rankings, students in the lowest tier aim to climb to the top, employing any means necessary to overcome the harsh system and societal pressures. Amidst intense competition and personal ambitions, alliances are forged and tested as they strive to defy the odds and achieve success..",
@@ -97,7 +97,7 @@ export const MangaConstants = [
     },
 
     {
-        id:2,
+
         name: "Vagabond",
         rating: 5, // Please provide the rating for Hyouka
         description: "Set in 17th-century Japan, two young warriors, Takezō and Matahachi, embark on separate paths of redemption and self-discovery amidst a backdrop of samurai battles, personal trials, and the pursuit of martial mastery. Their journeys intertwine with the lives of legendary figures like Musashi Miyamoto and Kojirō Sasaki, shaping their destinies in a tumultuous era of honor, conflict, and transcendence.",

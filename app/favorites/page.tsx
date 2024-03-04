@@ -15,8 +15,8 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import { animeConstants ,MangaConstants, MovieConstants} from '../../constants/anime'; // Import animeConstants
 
-import { animeConstants ,MangaConstants, MovieConstants} from '@/constants/anime'; // Import animeConstants
 
 const Favorites = () => {
 return (
