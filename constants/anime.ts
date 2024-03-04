@@ -1,15 +1,15 @@
-import hyouka from 'public/anime-images/hyouka.jpg';
-import attack from 'public/anime-images/attack.jpg';
-import death from 'public/anime-images/death.jpg';
-import honey from 'public/anime-images/honey.jpg';
-import five from 'public/anime-images/5sec.jpg';
+import hyouka from '/public/anime-images/hyouka.jpg';
+import attack from '/public/anime-images/attack.jpg';
+import death from '/public/anime-images/death.jpg';
+import honey from '/public/anime-images/honey.jpg';
+import five from '/public/anime-images/5sec.jpg';
 
-import dark from 'public/anime-images/Dark-knight.jpg';
-import inception from 'public/anime-images/inception.jpg';
-import shawshank from 'public/anime-images/the-shawshank-redemption.jpg';
+import dark from '/public/anime-images/Dark-knight.jpg';
+import inception from '/public/anime-images/inception.jpg';
+import shawshank from '/public/anime-images/the-shawshank-redemption.jpg';
 
-import classroom from 'public/anime-images/classroom-of-the-elite.jpg';
-import vagabond from 'public/anime-images/vagabond.jpg';
+import classroom from '/public/anime-images/classroom-of-the-elite.jpg';
+import vagabond from '/public/anime-images/vagabond.jpg';
 
 
 
