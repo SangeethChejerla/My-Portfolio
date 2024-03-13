@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import "highlight.js/styles/github-dark.css";
 import { H1 } from "@/components/blog-component";
+import { Button } from "@/components/ui/button";
 
 export const revalidate = 0;
 // add metadata for the title.
@@ -43,16 +44,17 @@ export default async function Post({ params: { slug } }: Props) {
   //   published date
 
   const tags = meta.tags.map((tag, i) => (
+    <>
+    <Button variant={"ghost"}
+    className="inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors">
     <Link
-      className="inline-flex animate-shine items-center justify-center rounded-full 
-      text-xs border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%
-        ,#000103)] bg-[length:200%_100%] px-3 py-1 font-medium text-neutral-400
-         transition-colors space-x-4 hover:bg-yellow-300 hover:text-black"
       key={i}
       href={`/tags/${tag}`}
     >
       {tag}
     </Link>
+    </Button>
+    </>
   ));
 
   return (

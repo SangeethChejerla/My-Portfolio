@@ -17,6 +17,7 @@ import { FaScrewdriverWrench } from "react-icons/fa6";
   TbMailbox,
 } from 'react-icons/tb';
 import { BsTwitterX } from "react-icons/bs";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import React from 'react';
 import Logo from "@/components/Logo"
 import { Clock } from './clock';
@@ -28,6 +29,7 @@ const links = [
   { href: '/projects', label: 'Projects', icon: GrProjects },
   { href: '/rules', label: 'Rules', icon: FaScrewdriverWrench },
   { href: '/favorites', label: 'Favorites', icon: GrFavorite },
+  {href: `/quotes`, label: `Quotes`, icon: RiDoubleQuotesL},
   { href: '/contact', label: 'Contact', icon: TbMailbox },
   
   // { href: '/gallery', label: 'Gallery', icon: TbPhoto },
@@ -83,7 +85,7 @@ export function Sidebar({ className }: { className?: string }) {
 
         <NavMenu />
 
-        <section className="flex w-full items-center gap-3 py-2 pl-2">
+        <section className="flex w-full justify-center items-center lg:items-start lg:flex lg:w-full gap-3 py-2 pl-2">
           {social.map((item) => (
             <NextLink
               href={item.url}
@@ -115,7 +117,7 @@ export function Sidebar({ className }: { className?: string }) {
         </motion.div>
 
         <motion.div
-          className="relative z-50 flex h-12 md:h-24 md:flex-col"
+          className="relative z-50  h-12 flex items-center justify-center"
           initial={{ opacity: 0, scale: 0.98, y: 8 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
@@ -125,8 +127,11 @@ export function Sidebar({ className }: { className?: string }) {
             delay: 0.1,
           }}
         >
+          <div className='flex flex-col justify-between'>
           <ThemeToggle/>
           <Clock/>
+          </div>
+          
         
         </motion.div>
       </motion.div>

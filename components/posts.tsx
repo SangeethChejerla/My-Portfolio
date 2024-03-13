@@ -43,17 +43,19 @@ export const Post = ({ post }: { post: Meta }) => {
             <h2 className="text-2xl font-bold text-white hover:text-yellow-300 transition-colors">{title}</h2>
           </div>
         </Link>
-        <div className="flex justify-start mt-2">
-          <p className="text-sm text-gray-600">Tags:</p>
-          {post.tags.map((tag, index) => (
-            <Link
-              key={tag}
-              href={`/tags/${tag}`}
-              className="inline-flex animate-shine items-center justify-center rounded-full text-xs border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-2 py-1 font-medium text-neutral-400 transition-colors">
-              {tag}
-            </Link>
-          ))}
-        </div>
+        <div className="flex justify-start mt-2 gap-x-3">
+  <p className="text-sm text-gray-600">Tags:</p>
+  {post.tags.map((tag, index) => (
+    <Link
+      key={tag}
+      href={`/tags/${tag}`}
+      className="flex animate-shine items-center justify-center text-xs rounded-lg border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-2 py-1 font-medium text-neutral-400 transition-colors tag-link min-w-[80px] max-w-[150px]"
+    >
+      {tag}
+    </Link>
+  ))}
+</div>
+
       </div>
       <p className="text-sm text-gray-500 hover:text-yellow-300">{new Date(date).toLocaleDateString()}</p>
     </div>

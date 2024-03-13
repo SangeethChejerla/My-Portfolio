@@ -1,5 +1,8 @@
 import ContactForm from "@/components/contactform";
-
+export const metadata = {
+    title: 'Contact',
+    description: "Let's connect and start a conversation. Whether you have a question, a proposal, or just want to say hello, I'd love to hear from you.",
+  };
 export default function Contact(){
 
     return(

@@ -9,6 +9,7 @@ import { Rulers } from "@/components/ruler";
 import BackToTop from "@/components/back-to-top";
 import NextTopLoader from 'nextjs-toploader';
 
+
 const spaceMono = localFont({
   src: [
     {
@@ -42,10 +43,10 @@ export const metadata: Metadata = {
   keywords: [
     "Next.js",
     "Sangeeth Reddy",
-    "projects",
+    "protfolio",
  
   ],
-  authors: [{ name: "Sangeeth Reddy", url: "" }],
+  authors: [{ name: "Sangeeth Reddy", url: "https://sangeethreddy.vercel.app" }],
   creator: "Sangeeth Reddy",
   publisher: "Sangeeth Reddy",
   alternates: {},
@@ -54,23 +55,23 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://kaminari.vercel.app"),
+  metadataBase: new URL("https://sangeethreddy.vercel.app"),
   openGraph: {
     title: "Sangeeth",
     description: "I am a full-stack engineer, an optimist, and an extremely hard worker. Discover my passion for full-stack programming and how I apply it to build outstanding digital experiences.",
-    url: "",
+    url: "https://sangeethreddy.vercel.app",
     siteName: "Sangeeth",
     images: [
       {
-        url: "https://kaminari.vercel.app/og.png",
+        url: "https://sangeethreddy.vercel.app/og.png",
         width: 800,
         height: 600,
       },
       {
-        url: "https://kaminari.vercel.app/og-dark.png",
+        url: "https://sangeethreddy.vercel.app/og-dark.png",
         width: 1800,
         height: 1600,
-        alt: "Next.js, TailwindCSS and shadcn-ui Starter Template",
+        alt: "Logo",
       },
     ],
     locale: "en-US",
@@ -102,7 +103,7 @@ export default function RootLayout({
       <body className={`${spaceMono.className}`}>
       
       <IntlProvider locale={params.locale} messages={messages}>
-        <Provider attribute="class" defaultTheme="system" enableSystem>
+        <Provider attribute="class" defaultTheme="dark">
         <main className="relative mx-2 flex min-h-screen max-w-4xl flex-col pt-12 md:mx-4 md:mt-0 md:flex-row md:pt-20 lg:mx-auto lg:pt-28">
         
         <NextTopLoader

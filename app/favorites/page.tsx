@@ -1,4 +1,4 @@
-"use client"
+
 import AnimeCard from '@/components/fav-card/anime-card'; // Import the AnimeCard component
 import MangaCard from '@/components/fav-card/manga-card';
 import MovieCard from '@/components/fav-card/movie-card';
@@ -17,6 +17,10 @@ import {
 } from "@/components/ui/tabs"
 import { animeConstants ,MangaConstants, MovieConstants} from '@/constants/anime'; // Import animeConstants
 
+export const metadata = {
+  title: 'Favorites',
+  description: 'Discover my favorite things, from Animes to movies, and everything in between. This section is a reflection of my tastes and interests, offering a glimpse into what I enjoy.',
+};
 
 const Favorites = () => {
 return (

@@ -33,9 +33,11 @@ interface Project {
           />
       
         <CardContent className="p-2">
-          <Balancer>
-          <h2 className="text-2xl font-bold mb-2 text-clip ">{title}</h2>
+          
+          <h2 className="text-2xl font-bold mb-2 text-clip "><Balancer>
+            {title}
           </Balancer>
+          </h2>
           <div className="flex justify-center space-x-2">
             {tags.map(tag => (
               <div
@@ -48,9 +50,11 @@ interface Project {
           </div>
         </CardContent>
         <CardContent className="p-2">
-        <Balancer>
-          <p className="text-sm text-gray-500">{description}</p>
+        
+          <p className="text-sm text-gray-500">
+          <Balancer>{description}
           </Balancer>
+          </p>
         </CardContent>
         <CardFooter>
           <div className="mx-auto">

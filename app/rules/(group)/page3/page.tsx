@@ -1,13 +1,17 @@
-"use client";
+
 
 import Wrapper from "@/components/wrapper";
 import Balancer from "react-wrap-balancer";
 
+export const metadata = {
+  title: 'Rule-3',
+  description: 'Checkout my rule-3',
+};
 
 export default function Rules() {
   return (
     <section className="flex flex-col lg:flex-row">
-      <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
+      <section className="flex  w-full flex-col justify-between p-9 lg:h-auto">
         <Wrapper>
           <div className="mx-auto flex max-w-sm flex-col justify-between">
             <span

@@ -4,6 +4,8 @@ import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '@/lib/send-email';
 
+
+
 export type FormData = {
   name: string;
   email: string;
@@ -20,7 +22,7 @@ const Contact: FC = () => {
   }
 
   return (
-    <div className={`bg-${isDarkMode ? 'gray-900' : 'gray-100'} min-h-screen p-8`}>
+    <div className={`bg-${isDarkMode ? 'gray-900' : 'gray-100'} p-8`}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-5'>
           <label
@@ -67,6 +69,7 @@ const Contact: FC = () => {
         <div>
           <div className='flex justify-center'>
           <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+            
             Submit
           </button>
           </div>

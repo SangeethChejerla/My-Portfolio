@@ -1,4 +1,4 @@
-"use client";
+
 
 import Image from "next/image";
 import Wrapper from "@/components/wrapper";
@@ -7,10 +7,15 @@ import { Button } from "@/components/ui/button";
 import manWIthRobot from "@/public/images/man-with-robot.png";
 import Balancer from "react-wrap-balancer";
 
+export const metadata = {
+  title: 'Rule-2',
+  description: 'Checkout my rule-2',
+};
+
 export default function Rules() {
   return (
     <section className="flex flex-col lg:flex-row">
-      <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
+      <section className="flex  w-full flex-col justify-between p-9 lg:h-auto">
         <Wrapper>
           <div className="mx-auto flex max-w-sm flex-col justify-between">
             <span

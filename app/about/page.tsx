@@ -1,7 +1,10 @@
 
 import SkillCategoryList from '@/components/myskills/skill-category-list';
 import CharacterProfileDropdown from '@/components/profilecard';
-
+export const metadata = {
+    title: 'About',
+    description: 'Learn more about me.',
+  };
 export default function About(){
     return(
         <>

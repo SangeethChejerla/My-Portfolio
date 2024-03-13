@@ -22,7 +22,24 @@ const projects = [
     tags: ["Next.js","Typescript","react-particle-image"],
     description: "Images to particle effect: Transform static images into dynamic visualizations by simulating particle effects, adding motion and depth for enhanced aesthetic appeal.",
     githubUrl: "https://github.com/sangeeth-Chejerla/Image-to-particles"
-  }
+  },
+  {
+    imagePath: "https://images.unsplash.com/photo-1615494937408-7f4e41bf45d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbW1hbmQlMjBsaW5lJTIwaW50ZXJmYWNlfGVufDB8fDB8fHww",
+    title: "CLIfolio",
+    tags: ["Next.js","Typescript"],
+    description: "CLIfolio is a command-line interface (CLI) tool designed for portfolio management, allowing users to efficiently organize, track, and showcase their projects and achievements with ease.",
+    githubUrl: "https://github.com/sangeeth-Chejerla/CLIfolio"
+  },
+
+  {
+    imagePath: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWV8ZW58MHx8MHx8fDA%3D",
+    title: "CinemaDB",
+    tags: ["Next.js","Typescript","shadcn ui"],
+    description: "CinemaDB is a comprehensive movie database application, offering users a vast collection of films with detailed information including genre, ratings, and release date.",
+    githubUrl: "https://github.com/sangeeth-Chejerla/movie-recommendation-frontend"
+  },
+
+
   // Add more projects as needed
 ];
 

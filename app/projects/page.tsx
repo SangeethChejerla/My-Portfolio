@@ -1,5 +1,8 @@
 import ProjectList from "@/components/myprojects/project-card";
-
+export const metadata = {
+    title: 'Projects',
+    description: 'Explore my latest projects where I have utilized various technologies to build innovative and impactful solutions. These projects showcase my skills and my commitment to solving problems and creating value in the tech industry.',
+};
 export default function projects(){
 
     return(
