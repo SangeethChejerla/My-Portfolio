@@ -15,10 +15,10 @@ import Video from "@/components/video";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { cache } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import { BlogPost, Meta } from "../types";
 
+// Cache the blog post metadata
 export const getPostsMeta = cache(getPosts);
 
 export async function getPosts(): Promise<Meta[] | undefined> {
@@ -47,19 +47,23 @@ export async function getPosts(): Promise<Meta[] | undefined> {
       .map((obj) => obj.path)
       .filter((path) => path.endsWith("mdx"));
 
-    const posts: Meta[] = [];
+    const posts = await Promise.all(
+      filesArray.map(async (file) => {
+        const post = await getPostByName(file);
+        if (post) {
+          return post.meta;
+        }
+        return null;
+      }),
+    );
 
-    // Loop through files and fetch metadata for each MDX file
-    for (const file of filesArray) {
-      const post = await getPostByName(file);
-      if (post) {
-        const { meta } = post;
-        posts.push(meta);
-      }
-    }
-
-    return posts;
+    // Filter out null values and return the valid posts only
+    const validPosts: Meta[] = posts.filter(
+      (meta): meta is Meta => meta !== null,
+    );
+    return validPosts;
   } catch (error) {
+    console.error("Error fetching posts:", error);
     return undefined;
   }
 }
@@ -114,7 +118,6 @@ export async function getPostByName(
         parseFrontmatter: true,
         mdxOptions: {
           rehypePlugins: [
-            rehypeHighlight,
             rehypeSlug,
             [rehypeAutolinkHeadings, { behavior: "wrap" }],
           ],
@@ -136,6 +139,7 @@ export async function getPostByName(
 
     return blogPostObj;
   } catch (error) {
+    console.error("Error compiling MDX:", error);
     return undefined;
   }
 }
