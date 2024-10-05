@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 interface Quote {
   content: string;
@@ -7,6 +7,6 @@ interface Quote {
 }
 
 export async function fetchRandomQuote(): Promise<Quote> {
-  const response = await axios.get('https://api.quotable.io/random');
+  const response = await axios.get("https://api.quotable.io");
   return response.data;
 }

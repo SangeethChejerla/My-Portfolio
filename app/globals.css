@@ -18,8 +18,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
-
 /* Hero Image styles */
 .container {
   height: 100vh;
@@ -82,27 +80,28 @@
 @keyframes morph {
   0% {
     border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
- }
+  }
   100% {
     border-radius: 40% 60%;
- }
+  }
 }
 @keyframes spin {
   to {
     transform: rotate(1turn);
- }
+  }
 }
 
-
 .gradient-text {
-  background-image: linear-gradient(to right, rgb(254, 240, 138), rgb(250, 204, 21), rgb(161, 98, 7));
+  background-image: linear-gradient(
+    to right,
+    rgb(254, 240, 138),
+    rgb(250, 204, 21),
+    rgb(161, 98, 7)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-
-
-
 
 @layer base {
   :root {
@@ -148,4 +147,23 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+}
+
+@keyframes matrix-rain {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+.matrix-character {
+  position: absolute;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-shadow: 0 0 5px #0f0;
+  animation: matrix-rain 5s linear infinite;
 }
